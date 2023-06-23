@@ -1,5 +1,5 @@
 <?php
-// Establish a connection to the MySQL database
+
 $host = "localhost";
 $username = "root";
 $password = "";
@@ -10,18 +10,16 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Check if a student ID is provided via GET request
+
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Retrieve the student record from the database
     $sql = "SELECT * FROM students WHERE id = '$id'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
 
-        // Display the form with pre-filled values
         echo "<h2>Edit Registration Details</h2>";
         echo "<form method='POST' action='update_registration.php'>";
         echo "<input type='hidden' name='id' value='".$row['id']."'>";

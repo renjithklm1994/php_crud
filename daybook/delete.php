@@ -14,13 +14,13 @@ function db_connect()
     return $conn;
 }
 
-// Check if the student ID is provided as a parameter
+
 if (isset($_GET['id'])) {
     $studentId = $_GET['id'];
 
     $conn = db_connect();
 
-    // Delete the student's registration from the database
+  
     $sql = "DELETE FROM students WHERE id = $studentId";
 
     if (mysqli_query($conn, $sql)) {

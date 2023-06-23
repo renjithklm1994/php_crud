@@ -14,11 +14,11 @@ function db_connect()
     return $conn;
 }
 
-// Check if the form is submitted
+
 if (isset($_POST['submit'])) {
     $conn = db_connect();
 
-    // Get the form data
+  
     $studentId = $_POST['id'];
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -27,7 +27,6 @@ if (isset($_POST['submit'])) {
     $gender = $_POST['gender'];
     $course = $_POST['course'];
 
-    // Update the registration data in the database
     $sql = "UPDATE students SET name='$name', email='$email', phone='$phone', reg_number='$reg_number', gender='$gender', course='$course' WHERE id=$studentId";
 
     if (mysqli_query($conn, $sql)) {
