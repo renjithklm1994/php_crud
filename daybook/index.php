@@ -39,19 +39,19 @@
                        </div>
                        <div class="form-group">
                         
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        </select>
                         
                        </div> 
                        <div class="form-group">
 
-                       <label for="course">Course:</label>
-        <input type="text" id="course" name="course" required>
-</div>
+                        <label for="course">Course:</label>
+                        <input type="text" id="course" name="course" required>
+                        </div>
                        <input  type="submit" class="btn btn-primary" value="Register"><br>
                        <a href="view.php" class="btn btn-primary">view</a>
                 </div>
