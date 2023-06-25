@@ -1,16 +1,8 @@
 <?php
-// Establish a connection to the MySQL database
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "student";
-
-$conn = mysqli_connect($host, $username, $password, $database);
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+require 'connection.php';
 
 // Retrieve data from the registration form
+$conn = db_connect();
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];

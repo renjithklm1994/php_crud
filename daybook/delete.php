@@ -1,18 +1,6 @@
 <?php
-function db_connect()
-{
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "student";
 
-    $conn = mysqli_connect($host, $username, $password, $database);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    return $conn;
-}
+require 'connection.php';
 
 
 if (isset($_GET['id'])) {

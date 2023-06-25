@@ -1,19 +1,5 @@
 <?php
-function db_connect()
-{
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "student";
-
-    $conn = mysqli_connect($host, $username, $password, $database);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    return $conn;
-}
-
+require 'connection.php';
 // Retrieve all student records from the database
 $conn = db_connect();
 $sql = "SELECT * FROM students";
