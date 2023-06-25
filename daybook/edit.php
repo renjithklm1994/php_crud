@@ -1,5 +1,6 @@
 <?php
 require 'connection.php';
+
 $conn = db_connect();
 
 
@@ -20,12 +21,15 @@ if (isset($_GET['id'])) {
         echo "Phone: <input type='text' name='phone' value='".$row['phone']."' required><br><br>";
         echo "Registration Number: <input type='text' name='reg_number' value='".$row['reg_number']."' required><br><br>";
         echo "Gender: ";
-        echo "<input type='radio' name='gender' value='Male' required";
-        if ($row['gender'] == 'Male') echo " checked";
+        echo "<input type='radio' name='gender' value='male' required";
+        if ($row['gender'] == 'male') echo " checked";
         echo "> Male";
-        echo "<input type='radio' name='gender' value='Female' required";
-        if ($row['gender'] == 'Female') echo " checked";
-        echo "> Female<br><br>";
+        echo "<input type='radio' name='gender' value='female' required";
+        if ($row['gender'] == 'female') echo " checked";
+        echo "> Female";
+        echo"<input type ='radio' name='gender'value='other' required";
+        if ($row['gender'] == 'other') echo "checked";
+        echo">others <br><br>";
         echo "Course: <input type='text' name='course' value='".$row['course']."' required><br><br>";
         echo "<input type='submit' name='submit' value='Update'>";
         echo "</form>";

@@ -1,5 +1,6 @@
 <?php
-require 'connection.php';
+
+include 'connection.php';
 // Retrieve all student records from the database
 $conn = db_connect();
 $sql = "SELECT * FROM students";
